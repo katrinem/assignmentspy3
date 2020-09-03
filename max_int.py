@@ -1,9 +1,15 @@
 # Program that finds the maximum positive integer input by a user. 
 # The user repeatedly inputs numbers until a negative value is entered.
 
-# Get two inputs from user to start the loop
+# Create two values to start the loop
+num_int = 0
+max_int = 0
 
-# While the user enters positive values, compare the two values
-# and keep the larger one. Then ask for a new one
+# Compare each new input from user to the former and update the maximum as needed,
+# until a negative value is entered
+while num_int >= 0:
+    num_int = int(input("Enter a positive integer: "))
+    if num_int >= max_int:
+        max_int = num_int
 
-# As soon as the input is negative, exit the loop and print the maximum
+print("The maximum is", max_int)
